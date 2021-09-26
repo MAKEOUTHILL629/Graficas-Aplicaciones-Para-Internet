@@ -92,7 +92,9 @@ $rejected = $editionTopic->consultarRejected($year);
                 if (!isset($acceptedTopic)) {
                     $acceptedTopic = 0;
                 }
-                echo "['" . $top->getName() . "', " . $acceptedTopic . ", " . $rejectedTopic . "],\n";
+                if($acceptedTopic != 0 && $rejectedTopic !=0){
+                    echo "['" . $top->getName() . "', " . $acceptedTopic . ", " . $rejectedTopic . "],\n";
+                }
             }
 
             ?>
